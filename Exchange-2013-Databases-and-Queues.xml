@@ -1,2818 +1,1391 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
--<zabbix_export>
-
-<version>3.2</version>
-
-<date>2017-12-11T11:05:53Z</date>
-
-
--<groups>
-
-
--<group>
-
-<name>Templates</name>
-
-</group>
-
-</groups>
-
-
--<templates>
-
-
--<template>
-
-<template>Exchange 2013 Database and Queue Discovery</template>
-
-<name>Exchange 2013 Database and Queue Discovery</name>
-
-<description/>
-
-
--<groups>
-
-
--<group>
-
-<name>Templates</name>
-
-</group>
-
-</groups>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-
--<application>
-
-<name>Exchange Queue</name>
-
-</application>
-
-</applications>
-
-<items/>
-
-
--<discovery_rules>
-
-
--<discovery_rule>
-
-<name>Discover Databases</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<snmp_oid/>
-
-<key>exdb.discovery</key>
-
-<delay>0</delay>
-
-<status>0</status>
-
-<allowed_hosts/>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-
--<filter>
-
-<evaltype>0</evaltype>
-
-<formula/>
-
-<conditions/>
-
-</filter>
-
-<lifetime>30</lifetime>
-
-<description/>
-
-
--<item_prototypes>
-
-
--<item_prototype>
-
-<name>Activation Preference</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ActivationPreference[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Active Copy</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ActiveCopy[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Content Index Backlog</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ContentIndexBacklog[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Content Index Retry Queue Size</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ContentIndexRetryQueueSize[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Content Index State</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ContentIndexState[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Copy Queue Length</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.CopyQueueLength[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Last Copy Availability Checks Passed</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.IsLastCopyAvailabilityChecksPassed[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Last Copy Redundancy Checks Passed</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.IsLastCopyRedundancyChecksPassed[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Latest Full Backup Time</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.LatestFullBackupTime[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Latest Incremental Backup Time</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.LatestIncrementalBackupTime[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Log Copy Queue Increasing</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.LogCopyQueueIncreasing[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Log Replay Queue Increasing</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.LogReplayQueueIncreasing[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Max Log To Replay</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.MaxLogToReplay[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Replay Queue Length</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ReplayQueueLength[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Replay Suspended</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ReplaySuspended[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Replication Is In Block Mode</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.ReplicationIsInBlockMode[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>Database Status</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exdb.Status[{#EXDB}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>0</trends>
-
-<status>0</status>
-
-<value_type>4</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Database Copy</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-</item_prototypes>
-
-
--<trigger_prototypes>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.ContentIndexState[{#EXDB}].regexp("(Healthy)|(Mounted)",2)}=0</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Content Index state not healthy</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>3</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.CopyQueueLength[{#EXDB}].last()}>10</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Copy Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.CopyQueueLength[{#EXDB}].last()}>30</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Copy Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>3</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.CopyQueueLength[{#EXDB}].last()}>50</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Copy Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.Status[{#EXDB}].regexp("(Healthy)|(Mounted)",2)}=0</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Database is not in healthy state</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.LogCopyQueueIncreasing[{#EXDB}].regexp(True,2)}=0</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Log Copy Queu Increasing</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.LogReplayQueueIncreasing[{#EXDB}].iregexp(True,2)}=0</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Log Replay Queue Increasing</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}>10</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Replay Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}>30</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Replay Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>3</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}>50</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Replay Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}>150</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Replay Queue Length</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>5</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplicationIsInBlockMode[{#EXDB}].regexp(True,2)}=0</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Replication not in block mode</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description>Possible problems with IO performance</description>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-</trigger_prototypes>
-
-<graph_prototypes/>
-
-<host_prototypes/>
-
-</discovery_rule>
-
-
--<discovery_rule>
-
-<name>Discover Queues</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<snmp_oid/>
-
-<key>exqueue.discovery</key>
-
-<delay>0</delay>
-
-<status>0</status>
-
-<allowed_hosts/>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-
--<filter>
-
-<evaltype>0</evaltype>
-
-<formula/>
-
-<conditions/>
-
-</filter>
-
-<lifetime>5</lifetime>
-
-<description/>
-
-
--<item_prototypes>
-
-
--<item_prototype>
-
-<name>{#EXQUEUE} Number of Deferred Messages</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exqueue.DeferredMessageCount[{#EXQUEUE}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Queue</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>{#EXQUEUE} Number of Locked Messages</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exqueue.LockedMessageCount[{#EXQUEUE}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Queue</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>{#EXQUEUE} Number of Messages</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exqueue.MessageCount[{#EXQUEUE}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Queue</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-
--<item_prototype>
-
-<name>{#EXQUEUE} Number of Retry Messages</name>
-
-<type>2</type>
-
-<snmp_community/>
-
-<multiplier>0</multiplier>
-
-<snmp_oid/>
-
-<key>exqueue.RetryCount[{#EXQUEUE}]</key>
-
-<delay>0</delay>
-
-<history>90</history>
-
-<trends>365</trends>
-
-<status>0</status>
-
-<value_type>3</value_type>
-
-<allowed_hosts/>
-
-<units/>
-
-<delta>0</delta>
-
-<snmpv3_contextname/>
-
-<snmpv3_securityname/>
-
-<snmpv3_securitylevel>0</snmpv3_securitylevel>
-
-<snmpv3_authprotocol>0</snmpv3_authprotocol>
-
-<snmpv3_authpassphrase/>
-
-<snmpv3_privprotocol>0</snmpv3_privprotocol>
-
-<snmpv3_privpassphrase/>
-
-<formula>1</formula>
-
-<delay_flex/>
-
-<params/>
-
-<ipmi_sensor/>
-
-<data_type>0</data_type>
-
-<authtype>0</authtype>
-
-<username/>
-
-<password/>
-
-<publickey/>
-
-<privatekey/>
-
-<port/>
-
-<description/>
-
-<inventory_link>0</inventory_link>
-
-
--<applications>
-
-
--<application>
-
-<name>Exchange Queue</name>
-
-</application>
-
-</applications>
-
-<valuemap/>
-
-<logtimefmt/>
-
-<application_prototypes/>
-
-</item_prototype>
-
-</item_prototypes>
-
-
--<trigger_prototypes>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}>2</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Number of deffered message in queue detected</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}>5</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Number of deffered message in queue detected</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}>2</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Number of locked message in queue detected</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}>5</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Number of locked message in queue detected</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.RetryCount[{#EXQUEUE}].last(,5)}>10</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Number of retry Messagess High</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.RetryCount[{#EXQUEUE}].last(,5)}>4</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Number of retry Messagess Warning</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.MessageCount[{#EXQUEUE}].last(,5)}>50</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Total number of messages in queue</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>2</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-
--<trigger_prototype>
-
-<expression>{Exchange 2013 Database and Queue Discovery:exqueue.MessageCount[{#EXQUEUE}].last(,5)}>100</expression>
-
-<recovery_mode>0</recovery_mode>
-
-<recovery_expression/>
-
-<name>Total number of messages in queue</name>
-
-<correlation_mode>0</correlation_mode>
-
-<correlation_tag/>
-
-<url/>
-
-<status>0</status>
-
-<priority>4</priority>
-
-<description/>
-
-<type>0</type>
-
-<manual_close>0</manual_close>
-
-<dependencies/>
-
-<tags/>
-
-</trigger_prototype>
-
-</trigger_prototypes>
-
-<graph_prototypes/>
-
-<host_prototypes/>
-
-</discovery_rule>
-
-</discovery_rules>
-
-<httptests/>
-
-<macros/>
-
-<templates/>
-
-<screens/>
-
-</template>
-
-</templates>
-
+<zabbix_export>
+    <version>3.2</version>
+    <date>2017-12-11T12:08:30Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Exchange 2013 Database and Queue Discovery</template>
+            <name>Exchange 2013 Database and Queue Discovery</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Exchange Database Copy</name>
+                </application>
+                <application>
+                    <name>Exchange Queue</name>
+                </application>
+            </applications>
+            <items/>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Discover Databases</name>
+                    <type>2</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>exdb.discovery</key>
+                    <delay>0</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Activation Preference</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ActivationPreference[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Active Copy</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ActiveCopy[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Content Index Backlog</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ContentIndexBacklog[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Content Index Retry Queue Size</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ContentIndexRetryQueueSize[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Content Index State</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ContentIndexState[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Copy Queue Length</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.CopyQueueLength[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Last Copy Availability Checks Passed</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.IsLastCopyAvailabilityChecksPassed[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Last Copy Redundancy Checks Passed</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.IsLastCopyRedundancyChecksPassed[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Latest Full Backup Time</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.LatestFullBackupTime[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Latest Incremental Backup Time</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.LatestIncrementalBackupTime[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Log Copy Queue Increasing</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.LogCopyQueueIncreasing[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Log Replay Queue Increasing</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.LogReplayQueueIncreasing[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Max Log To Replay</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.MaxLogToReplay[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Replay Queue Length</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ReplayQueueLength[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Replay Suspended</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ReplaySuspended[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Replication Is In Block Mode</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.ReplicationIsInBlockMode[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Database Status</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exdb.Status[{#EXDB}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>0</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Database Copy</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.ContentIndexState[{#EXDB}].regexp(&quot;(Healthy)|(Mounted)&quot;,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Content Index state not healthy</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.CopyQueueLength[{#EXDB}].last()}&gt;10</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Copy Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.CopyQueueLength[{#EXDB}].last()}&gt;30</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Copy Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.CopyQueueLength[{#EXDB}].last()}&gt;50</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Copy Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.Status[{#EXDB}].regexp(&quot;(Healthy)&quot;,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Database is in healthy state</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.Status[{#EXDB}].regexp(&quot;(Mounted)&quot;,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Database is in mounted state</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.Status[{#EXDB}].regexp(&quot;(Healthy)|(Mounted)&quot;,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Database is not in healthy state</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.LogCopyQueueIncreasing[{#EXDB}].regexp(True,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Log Copy Queu Increasing</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.LogReplayQueueIncreasing[{#EXDB}].iregexp(True,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Log Replay Queue Increasing</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}&gt;10</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Replay Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}&gt;30</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Replay Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}&gt;50</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Replay Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplayQueueLength[{#EXDB}].last(,2)}&gt;150</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Replay Queue Length</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>5</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exdb.ReplicationIsInBlockMode[{#EXDB}].regexp(True,2)}=0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Replication not in block mode</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Possible problems with IO performance</description>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>Discover Queues</name>
+                    <type>2</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>exqueue.discovery</key>
+                    <delay>0</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>5</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>{#EXQUEUE} Number of Deferred Messages</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exqueue.DeferredMessageCount[{#EXQUEUE}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Queue</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#EXQUEUE} Number of Locked Messages</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exqueue.LockedMessageCount[{#EXQUEUE}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Queue</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#EXQUEUE} Number of Messages</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exqueue.MessageCount[{#EXQUEUE}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Queue</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>{#EXQUEUE} Number of Retry Messages</name>
+                            <type>2</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>exqueue.RetryCount[{#EXQUEUE}]</key>
+                            <delay>0</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Exchange Queue</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Number of deffered message in queue detected</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}&gt;5</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Number of deffered message in queue detected</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}&gt;2</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Number of locked message in queue detected</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.LockedMessageCount[{#EXQUEUE}].last(,2)}&gt;5</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Number of locked message in queue detected</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.RetryCount[{#EXQUEUE}].last(,5)}&gt;10</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Number of retry Messagess High</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.RetryCount[{#EXQUEUE}].last(,5)}&gt;4</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Number of retry Messagess Warning</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.MessageCount[{#EXQUEUE}].last(,5)}&gt;50</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Total number of messages in queue</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Exchange 2013 Database and Queue Discovery:exqueue.MessageCount[{#EXQUEUE}].last(,5)}&gt;100</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Total number of messages in queue</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <httptests/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
 </zabbix_export>
