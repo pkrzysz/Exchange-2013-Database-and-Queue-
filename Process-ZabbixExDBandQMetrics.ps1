@@ -1,22 +1,8 @@
-if (Test-Path('c:\Program Files\Microsoft\Exchange Server\V14\bin\RemoteExchange.ps1'))
-{
-. 'c:\Program Files\Microsoft\Exchange Server\V14\bin\RemoteExchange.ps1'
-}
-elseif (Test-Path('c:\Program Files\Microsoft\Exchange Server\V15\bin\RemoteExchange.ps1'))
-{
-. 'c:\Program Files\Microsoft\Exchange Server\V15\bin\RemoteExchange.ps1'
-}
-elseif (Test-Path('c:\Program Files\Microsoft\Exchange Server\V16\bin\RemoteExchange.ps1'))
-{
-. 'c:\Program Files\Microsoft\Exchange Server\V16\bin\RemoteExchange.ps1'
-}
-else
-{
-"Unable to detect Exchange remote"
-exit;
-}
+$uri= "http://{0}/PowerShell/" -f ([System.Net.Dns]::GetHostByName(($env:computerName))).HostName
 
-Connect-ExchangeServer -auto -ClientApplication:ManagementShell 
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri $uri -Authentication Kerberos 
+Import-PSSession $Session -CommandName get-queue,Get-MailboxDatabaseCopyStatus 
+
 
 function Send-ZabbixTrap 
 {
@@ -253,9 +239,11 @@ Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LogCopyQueueInc
 Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LogReplayQueueIncreasing[$name]" -Value $database.LogReplayQueueIncreasing
 Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.MaxLogToReplay[$name]" -Value $database.MaxLogToReplay
 Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplayQueueLength[$name]" -Value $database.ReplayQueueLength
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.CopyQueueLength[$name]" -Value $database.CopyQueueLength
 Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplaySuspended[$name]" -Value $database.ReplaySuspended
 Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplicationIsInBlockMode[$name]" -Value $database.ReplicationIsInBlockMode
 if ($database.LatestIncrementalBackupTime -ne $null) {Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestIncrementalBackupTime[$name]" -Value $database.LatestIncrementalBackupTime}else{
                                                       Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestIncrementalBackupTime[$name]" -Value "Never"}
 
 }
+Remove-PSSession $Session 
