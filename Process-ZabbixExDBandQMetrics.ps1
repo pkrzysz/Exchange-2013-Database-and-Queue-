@@ -196,10 +196,11 @@ try{
 }
 
 $queues=Get-Queue 
+$cmpname = $env:COMPUTERNAME.ToLower()
 
 $queuesJson=""
 $queuesJson+='{ "data": [ '
-$queues | select -ExpandProperty NextHopDomain | %{$queuesJson+='{"{#EXQUEUE}": "'+$_+'" },'}
+$queues | select -ExpandProperty NextHopDomain | %{$queuesJson+='{"{#EXQUEUE}": "'+$cmpname+'-'+$_+'" },'}
 if ($queuesJson[$queuesJson.Length-1] -EQ ',') {$queuesJson=$queuesJson.Substring(0,$queuesJson.Length-1)}
 $queuesJson+=']}'
 $queuesJson
@@ -208,16 +209,16 @@ Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key exqueue.discovery -Va
 foreach ($queue in $queues)
 {
 $name=$queue.NextHopDomain
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.DeferredMessageCount[$name]" -Value $queue.DeferredMessageCount
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.LockedMessageCount[$name]" -Value $queue.LockedMessageCount
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.MessageCount[$name]" -Value $queue.MessageCount
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.RetryCount[$name]" -Value $queue.RetryCount
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.DeferredMessageCount[$cmpname-$name]" -Value $queue.DeferredMessageCount
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.LockedMessageCount[$cmpname-$name]" -Value $queue.LockedMessageCount
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.MessageCount[$cmpname-$name]" -Value $queue.MessageCount
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exqueue.RetryCount[$cmpname-$name]" -Value $queue.RetryCount
 }
 
 $databases = Get-MailboxDatabaseCopyStatus
 $databasesJson=""
 $databasesJson+='{ "data": [ '
-$databases | select -ExpandProperty DatabaseName| %{$databasesJson+='{"{#EXDB}": "'+$_+'" },'}
+$databases | select -ExpandProperty DatabaseName| %{$databasesJson+='{"{#EXDB}": "'+$cmpname+'-'+$_+'" },'}
 if ($databasesJson[$databasesJson.Length-1] -EQ ',') {$databasesJson=$databasesJson.Substring(0,$databasesJson.Length-1)}
 $databasesJson+=']}'
 $databasesJson
@@ -226,24 +227,24 @@ Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key exdb.discovery -Value
 foreach ($database in $databases)
 {
 $name=$database.DatabaseName
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ActiveCopy[$name]" -Value $database.ActiveCopy
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ContentIndexBacklog[$name]" -Value $database.ContentIndexBacklog
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ContentIndexRetryQueueSize[$name]" -Value $database.ContentIndexRetryQueueSize
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ContentIndexState[$name]" -Value $database.ContentIndexState
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.Status[$name]" -Value $database.Status
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.IsLastCopyAvailabilityChecksPassed[$name]" -Value $database.IsLastCopyAvailabilityChecksPassed
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.IsLastCopyRedundancyChecksPassed[$name]" -Value $database.IsLastCopyRedundancyChecksPassed
-if ($database.LatestFullBackupTime -ne $null) {Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestFullBackupTime[$name]" -Value $database.LatestFullBackupTime}else{
-                                               Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestFullBackupTime[$name]" -Value "Never"}
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LogCopyQueueIncreasing[$name]" -Value $database.LogCopyQueueIncreasing
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LogReplayQueueIncreasing[$name]" -Value $database.LogReplayQueueIncreasing
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.MaxLogToReplay[$name]" -Value $database.MaxLogToReplay
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplayQueueLength[$name]" -Value $database.ReplayQueueLength
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.CopyQueueLength[$name]" -Value $database.CopyQueueLength
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplaySuspended[$name]" -Value $database.ReplaySuspended
-Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplicationIsInBlockMode[$name]" -Value $database.ReplicationIsInBlockMode
-if ($database.LatestIncrementalBackupTime -ne $null) {Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestIncrementalBackupTime[$name]" -Value $database.LatestIncrementalBackupTime}else{
-                                                      Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestIncrementalBackupTime[$name]" -Value "Never"}
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ActiveCopy[$cmpname-$name]" -Value $database.ActiveCopy
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ContentIndexBacklog[$cmpname-$name]" -Value $database.ContentIndexBacklog
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ContentIndexRetryQueueSize[$cmpname-$name]" -Value $database.ContentIndexRetryQueueSize
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ContentIndexState[$cmpname-$name]" -Value $database.ContentIndexState
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.Status[$cmpname-$name]" -Value $database.Status
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.IsLastCopyAvailabilityChecksPassed[$cmpname-$name]" -Value $database.IsLastCopyAvailabilityChecksPassed
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.IsLastCopyRedundancyChecksPassed[$cmpname-$name]" -Value $database.IsLastCopyRedundancyChecksPassed
+if ($database.LatestFullBackupTime -ne $null) {Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestFullBackupTime[$cmpname-$name]" -Value $database.LatestFullBackupTime}else{
+                                               Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestFullBackupTime[$cmpname-$name]" -Value "Never"}
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LogCopyQueueIncreasing[$cmpname-$name]" -Value $database.LogCopyQueueIncreasing
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LogReplayQueueIncreasing[$cmpname-$name]" -Value $database.LogReplayQueueIncreasing
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.MaxLogToReplay[$cmpname-$name]" -Value $database.MaxLogToReplay
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplayQueueLength[$cmpname-$name]" -Value $database.ReplayQueueLength
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.CopyQueueLength[$cmpname-$name]" -Value $database.CopyQueueLength
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplaySuspended[$cmpname-$name]" -Value $database.ReplaySuspended
+Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.ReplicationIsInBlockMode[$cmpname-$name]" -Value $database.ReplicationIsInBlockMode
+if ($database.LatestIncrementalBackupTime -ne $null) {Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestIncrementalBackupTime[$cmpname-$name]" -Value $database.LatestIncrementalBackupTime}else{
+                                                      Send-ZabbixTrap -HostName $env:COMPUTERNAME.ToLower() -Key "exdb.LatestIncrementalBackupTime[$cmpname-$name]" -Value "Never"}
 
 }
 Remove-PSSession $Session 
